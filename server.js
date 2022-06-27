@@ -2,9 +2,15 @@ var express = require('express');
 var app = express();
 app.set('port', process.env.PORT || 8080);
 
+// set up handlebars view engine
+var handlebars = require('express3-handlebars')
+ .create({ defaultLayout:'main' });
+app.engine('handlebars', handlebars.engine);
+app.set('view engine', 'handlebars');
+
 // routes
 app.get("/", function (req, res) {
-    res.send("Success!");
+    res.render('home');
 })
 
 // custom 404 page
