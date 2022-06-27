@@ -1,0 +1,15 @@
+{
+  "name": "the-worldly-man",
+  "version": "1.0.0",
+  "description": "quick facts on countries around the world",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.1",
+    "express3-handlebars": "^0.5.2"
+  }
+}
