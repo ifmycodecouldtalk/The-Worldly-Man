@@ -1,0 +1,10 @@
+.black-bar {
+    width: 100vw;
+    height: 50px;
+    background-color: black;
+}
+
+.country-form {
+    position: relative;
+    left: 10px;
+}

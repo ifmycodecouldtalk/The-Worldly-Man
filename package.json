@@ -9,6 +9,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "bootstrap": "^5.1.3",
     "express": "^4.18.1",
     "express3-handlebars": "^0.5.2"
   }

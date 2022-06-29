@@ -8,9 +8,18 @@ var handlebars = require('express3-handlebars')
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 
+// middleware
+// static files
+app.use(express.static(__dirname + '/public'));
+// bootstrap
+app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
+
 // routes
 app.get("/", function (req, res) {
     res.render('home');
+})
+app.get("/new-country", function(req, res){
+    res.render('form');
 })
 
 // custom 404 page
