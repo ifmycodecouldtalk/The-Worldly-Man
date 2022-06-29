@@ -1,6 +1,10 @@
 var express = require('express');
+const bodyParser = require("body-parser");
+const cors = require("cors");
 var app = express();
 app.set('port', process.env.PORT || 8080);
+
+
 
 // set up handlebars view engine
 var handlebars = require('express3-handlebars')
@@ -13,6 +17,15 @@ app.set('view engine', 'handlebars');
 app.use(express.static(__dirname + '/public'));
 // bootstrap
 app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
+// cors
+var corsOptions = {
+    origin: "http://localhost:8081"
+};
+app.use(cors(corsOptions));
+// parse application/json requests
+app.use(bodyParser.json());
+// parse requests of content-type - application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // routes
 app.get("/", function (req, res) {
