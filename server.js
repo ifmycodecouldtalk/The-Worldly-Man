@@ -4,7 +4,9 @@ const cors = require("cors");
 var app = express();
 app.set('port', process.env.PORT || 8080);
 
-
+// database
+const db = require("./app/models");
+db.sequelize.sync();
 
 // set up handlebars view engine
 var handlebars = require('express3-handlebars')
@@ -34,6 +36,7 @@ app.get("/", function (req, res) {
 app.get("/new-country", function(req, res){
     res.render('form');
 })
+require('./app/routes/country.route.js')(app);
 
 // custom 404 page
 app.use(function(req, res){
