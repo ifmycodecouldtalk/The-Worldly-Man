@@ -32,7 +32,7 @@ module.exports = function(app) {
       return response.json();
     }
     getCountry().then(country => {
-        res.render('country-page', {
+        res.render('countries/'+req.params.country.toLowerCase(), {
             countryName: country.countryName,
             countryCapital: country.countryCapital,
             countryLeader: country.countryLeader,
