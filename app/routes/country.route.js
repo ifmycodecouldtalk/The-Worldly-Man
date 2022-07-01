@@ -33,7 +33,7 @@ module.exports = function(app) {
     }
     getCountry().then(country => {
         res.render('countries/'+req.params.country.toLowerCase(), {
-            countryName: country.countryName,
+            countryName: country.countryName.toLowerCase().replace(/\s+/g, '-'),
             countryCapital: country.countryCapital,
             countryLeader: country.countryLeader,
             countryLanguage: country.countryLanguage

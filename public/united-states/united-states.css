@@ -1,0 +1,36 @@
+body {
+    background-color: #E1FBFF;
+}
+
+#washington {
+    width: 30%;
+    height: 30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#washington-painting {
+    text-align: center;
+    font-size: 12px;
+}
+
+#united-states-title {
+    text-align: center;
+}
+
+#joe-biden {
+    text-align: center;
+    
+}
+#joe-biden-portrait {
+    width: 20%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#washington-dc {
+    width: 70%;
+    height: auto;
+}
